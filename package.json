@@ -1,0 +1,31 @@
+{
+  "name": "pendataan-penduduk-nodejs",
+  "version": "1.0.0",
+  "description": "Aplikasi Pendataan Penduduk yang dibuat dengan Node JS",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vourteen14/Pendataan-Penduduk-NodeJS.git"
+  },
+  "keywords": [
+    "nodejs",
+    "express"
+  ],
+  "author": "Angga Suriana",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vourteen14/Pendataan-Penduduk-NodeJS/issues"
+  },
+  "homepage": "https://github.com/vourteen14/Pendataan-Penduduk-NodeJS#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "bootstrap": "^5.1.1",
+    "eta": "^1.12.3",
+    "express": "^4.17.1",
+    "mongoose": "^6.0.7"
+  }
+}
