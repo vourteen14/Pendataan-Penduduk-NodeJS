@@ -5,6 +5,8 @@ const eta = require("eta")
 const mongoose = require("mongoose")
 const Penduduk = require("./model/penduduk")
 
+const DB_HOST = process.env.DB_HOST
+
 app.use(bodyParser.urlencoded({ extended: true }))
 
 app.engine("eta", eta.renderFile)
@@ -15,7 +17,7 @@ app.set("views", "views")
 
 app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css'));
 
-mongoose.connect('mongodb://127.0.0.1/Penduduk').then(() => console.log('Koneksi ke daatabase sukses')).catch(err => console.error('Koneksi Database Gagal', err))
+mongoose.connect('mongodb://' + DB_HOST).then(() => console.log('Koneksi ke daatabase sukses')).catch(err => console.error('Koneksi Database Gagal', err))
 
 app.listen(6969, function() {
 	console.log('Server listen pada port 6969')
