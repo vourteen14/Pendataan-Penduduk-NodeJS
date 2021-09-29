@@ -4,10 +4,17 @@
   "description": "Aplikasi Pendataan Penduduk yang dibuat dengan Node JS",
   "main": "server.js",
   "scripts": {
+<<<<<<< HEAD
 		"test": "mocha",
 		"dev": "node server.js",
 		"sonar": "sonar-scanner",
 		"coverage": "./node_modules/.bin/nyc -r coberture -r text-summary -r html npm test"
+=======
+	"test": "mocha",
+	"dev": "node server.js",
+	"sonar": "sonar-scanner",
+	"coverage": "./node_modules/.bin/nyc -r coberture -r text-summary -r html npm test"
+>>>>>>> 139ed364cee0739c7c75e08d440ad5660a0659ae
   },
   "repository": {
     "type": "git",
