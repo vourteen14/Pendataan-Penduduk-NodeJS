@@ -4,7 +4,7 @@
   "description": "Aplikasi Pendataan Penduduk yang dibuat dengan Node JS",
   "main": "server.js",
   "scripts": {
-		"test": "mocha",
+		"test": "mocha --recursive --reporter mocha-junit-reporter --timeout 60000 --exit",
 		"dev": "node server.js",
 		"coverage-icov": "./node_modules/.bin/nyc -r conbertura -r text-summary -r icov npm test",
 		"sonar": "sonar-scanner"
