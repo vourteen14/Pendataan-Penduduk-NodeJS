@@ -10,7 +10,7 @@ pipeline {
 	      sh 'docker build -t $(VERSION) .'
 	    }
 	  }
-	    
+	  
 		stage('Testing Unit & Automate Code Analyze Pendataan Penduduk') {
 			steps {
 				nodejs(nodeJSInstallationName: 'NodeJS') {
