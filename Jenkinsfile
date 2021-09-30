@@ -5,11 +5,11 @@ pipeline {
 	  VERSION = sh(returnStdout: true, script: 'cat version').trim()
 	}
 	stages {
-	    stage('Build Project Pendataan Penduduk') {
-	        steps {
-	            sh 'docker build -t $(VERSION) .'
-	        }
+		stage('Build Project Pendataan Penduduk') {
+			steps {
+	      sh 'docker build -t $(VERSION) .'
 	    }
+	  }
 	    
 		stage('Testing Unit & Automate Code Analyze Pendataan Penduduk') {
 			steps {
@@ -30,5 +30,5 @@ pipeline {
 				echo 'Deploying....'
 			}
 		}
-    }
+  }
 }
