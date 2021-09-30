@@ -8,7 +8,7 @@ chai.use(chaiHttp)
 describe('Unit Test Callback', function() {
 	it('GET /', function(done) {
     chai.request(app)
-      .get('/')
+      .get('http://127.0.0.1:6969/')
       .end(function(err, res) {
 				expect(http.OK).to.equal(200)
 				done()
@@ -17,7 +17,7 @@ describe('Unit Test Callback', function() {
 	
 	it('POST /', function(done) {
     chai.request(app)
-      .post('/')
+      .post('http://127.0.0.1:6969/')
       .end(function(err, res) {
 				expect(http.OK).to.equal(200)
 				done()
@@ -26,7 +26,7 @@ describe('Unit Test Callback', function() {
 	
 	it('GET /lihat', function(done) {
     chai.request(app)
-      .get('/lihat')
+      .get('http://127.0.0.1:6969/lihat')
       .end(function(err, res) {
 				expect(http.OK).to.equal(200)
 				done()
@@ -34,7 +34,7 @@ describe('Unit Test Callback', function() {
   });
 	it('GET /update', function(done) {
     chai.request(app)
-      .get('/update')
+      .get('http://127.0.0.1:6969/update')
       .end(function(err, res) {
 				expect(http.OK).to.equal(200)
 				done()
@@ -43,7 +43,7 @@ describe('Unit Test Callback', function() {
 	
 	it('POST /update', function(done) {
     chai.request(app)
-      .post('/update')
+      .post('http://127.0.0.1:6969/update')
       .end(function(err, res) {
 				expect(http.OK).to.equal(200)
 				done()
@@ -52,7 +52,7 @@ describe('Unit Test Callback', function() {
 	
 	it('GET /hapus', function(done) {
     chai.request(app)
-      .get('/hapus')
+      .get('http://127.0.0.1:6969/hapus')
       .end(function(err, res) {
 				expect(http.OK).to.equal(200)
 				done()
@@ -61,7 +61,7 @@ describe('Unit Test Callback', function() {
 	
 	it('POST /hapus', function(done) {
     chai.request(app)
-      .post('/hapus')
+      .post('http://127.0.0.1:6969/hapus')
       .end(function(err, res) {
 				expect(http.OK).to.equal(200)
 				done()
