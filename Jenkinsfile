@@ -7,7 +7,7 @@ pipeline {
 	stages {
 		stage('Build Project Pendataan Penduduk') {
 			steps {
-				script{
+				script {
 					VERSION = sh(returnStdout: true, script: 'cat version').trim()
 					sh 'echo $(VERSION)'
 					sh 'docker build -t $(VERSION) .'
