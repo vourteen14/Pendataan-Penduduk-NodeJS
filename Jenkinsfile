@@ -1,8 +1,6 @@
 pipeline {
 	agent any
-	triggers {
-    githubPush()
-  }
+	
 	environment {
 		MongoDB_URL = 'mongodb+srv://anggasuriana:Ex9ZeI9aRyF7CDi9@cluster0.o7wse.mongodb.net/Penduduk?retryWrites=true&w=majority'
 		VERSION = sh(returnStdout: true, script: 'cat version').trim()
@@ -10,9 +8,10 @@ pipeline {
 	stages {
 		stage('Build Project Pendataan Penduduk') {
 			steps {
-	      sh 'docker build -t $(VERSION) .'
-	    }
-	  }
+				sh 'echo $(VERSION)'
+				sh 'docker build -t $(VERSION) .'
+	    		}
+	  	}
 	  
 		stage('Testing Unit & Automate Code Analyze Pendataan Penduduk') {
 			steps {
