@@ -7,7 +7,7 @@ pipeline {
 	stages {
 		stage('Build Project Pendataan Penduduk') {
 			steps {
-				sh 'docker build -t 1.0 .'
+				sh 'docker build -t vourteen14/Pendataan-Penduduk-NodeJS .'
 	    		}
 	  	}
 	  
