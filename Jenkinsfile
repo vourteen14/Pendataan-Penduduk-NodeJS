@@ -3,13 +3,15 @@ pipeline {
 	
 	environment {
 		MongoDB_URL = 'mongodb+srv://anggasuriana:Ex9ZeI9aRyF7CDi9@cluster0.o7wse.mongodb.net/Penduduk?retryWrites=true&w=majority'
-		VERSION = sh(returnStdout: true, script: 'cat version').trim()
 	}
 	stages {
 		stage('Build Project Pendataan Penduduk') {
 			steps {
-				sh 'echo $(VERSION)'
-				sh 'docker build -t $(VERSION) .'
+				script{
+					VERSION = sh(returnStdout: true, script: 'cat version').trim()
+					sh 'echo $(VERSION)'
+					sh 'docker build -t $(VERSION) .'
+				}
 	    		}
 	  	}
 	  
