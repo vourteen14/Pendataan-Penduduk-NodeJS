@@ -7,10 +7,12 @@ pipeline {
 	stages {
 		stage('Build & Tagging Project Pendataan Penduduk') {
 			steps {
-					def version = sh(returnStdout: true, script: "git tag --sort version:refname | tail -1").trim()
+				script {
+					env.VERSION = sh(returnStdout: true, script: "git tag --sort version:refname | tail -1").trim()
 					sh 'docker build -t vourteen14/pendataan-penduduk:latest .'
-					sh 'docker tag vourteen14/pendataan-penduduk vourteen14/pendataan-penduduk:${version}'
+					sh 'docker tag vourteen14/pendataan-penduduk vourteen14/pendataan-penduduk:${env.VERSION}'
 				}
+			}
 		}
 	  
 		stage('Testing Unit & Automate Code Analyze Pendataan Penduduk') {
