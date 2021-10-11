@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pendataan-penduduk-production
+  namespace: default
+spec:
+  replicas: 2
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 25%
+  selector:
+    matchLabels:
+      app: pendataan-penduduk-production
+  template:
+    metadata:
+      labels:
+        app: pendataan-penduduk-production
+    spec:
+      containers:
+      - image: vourteen14/pendataan-penduduk:latest
+        imagePullPolicy: Always
+        name: pendataan-penduduk-production
+        ports:
+        - containerPort: 80
+        readinessProbe:
+          httpGet:
+             path: /
+             port: 80
+          initialDelaySeconds: 5
+          periodSeconds: 5
+          successThreshold: 1
