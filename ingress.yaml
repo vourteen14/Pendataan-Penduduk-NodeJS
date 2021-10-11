@@ -5,11 +5,9 @@ metadata:
   annotations:
     ingress.kubernetes.io/rewrite-target: /
 spec:
-  defaultBackend:
-    service:
-      name: pendataan-penduduk-service
-      port:
-        number: 6969
+  backend:
+    serviceName: pendataan-penduduk-service
+    servicePort: 6969
   rules:
   - http:
       paths:
