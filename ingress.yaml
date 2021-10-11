@@ -1,0 +1,14 @@
+apiVersion: apps/v1
+kind: Ingress
+metadata:
+  name: pendataan-penduduk-ingress
+  annotations:
+    ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - http:
+      paths:
+        - path: /
+          backend:
+            serviceName: pendataan-penduduk-service
+            servicePort: 80
