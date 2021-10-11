@@ -11,4 +11,4 @@ spec:
         - path: /
           backend:
             serviceName: pendataan-penduduk-service
-            servicePort: 80
+            servicePort: 6969
