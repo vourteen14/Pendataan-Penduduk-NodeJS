@@ -5,4 +5,4 @@ COPY package.json /app
 RUN npm install
 COPY . /app
 CMD npm run dev
-EXPOSE 6969
+EXPOSE 80
