@@ -2,7 +2,7 @@ pipeline {
 	agent any
 	
 	environment {
-		MongoDB_URL = 'mongodb+srv://anggasuriana:Ex9ZeI9aRyF7CDi9@cluster0.o7wse.mongodb.net/Penduduk?retryWrites=true&w=majority'
+		MongoDB_URL = '';
 	}
 	stages {
 		stage('Build & Tagging Project Pendataan Penduduk') {
