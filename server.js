@@ -17,7 +17,7 @@ app.set("views", "views")
 
 app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css'));
 
-mongoose.connect(DB_HOST)
+mongoose.connect(DB_HOST);
 
 app.get('/', function(req, res) {
 	res.render("tambah", {})

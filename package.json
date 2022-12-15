@@ -5,8 +5,7 @@
   "main": "server.js",
   "scripts": {
     "test": "mocha test.js --timeout 60000 --exit",
-    "dev": "node server.js",
-    "sonar": "sonar-scanner"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
