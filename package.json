@@ -23,7 +23,7 @@
   "homepage": "https://github.com/vourteen14/Pendataan-Penduduk-NodeJS#readme",
   "dependencies": {
     "body-parser": "^1.19.0",
-    "bootstrap": "^5.1.1",
+    "bootstrap": "^5.2.3",
     "chai": "^4.3.4",
     "chai-http": "^4.3.0",
     "dotenv": "^10.0.0",
