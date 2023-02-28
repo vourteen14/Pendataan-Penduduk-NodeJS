@@ -5,5 +5,5 @@ Tested on Ubuntu 18.04:
 - `sudo bash /tmp/nodesource_setup.sh`
 - `sudo apt install nodejs`
 
-ENV VAR MONGO DB
-- DB_HOST (mongouri)
+Create and fill variable below with MongoDB Uri:
+- DB_HOST
