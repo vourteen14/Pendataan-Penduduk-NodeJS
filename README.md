@@ -7,3 +7,6 @@ Tested on Ubuntu 18.04:
 
 Create and fill variable below with MongoDB Uri:
 - DB_HOST
+
+Example:
+- `export DB_HOST=mongodb://.....`
