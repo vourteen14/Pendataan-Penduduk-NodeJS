@@ -1,6 +1,15 @@
 <html>
 	<head>
 		<style>
+			table {
+				counter-reset: section;
+			}
+
+			.count:before {
+				counter-increment: section;
+				content: counter(section);
+			}
+		
 			a { 
 				color: inherit;
 				text-decoration: none !important;
